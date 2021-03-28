@@ -171,6 +171,7 @@ img {
 	background-color: #fff;
 	padding: 20px 10px;
 	border-radius: 20px;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .halaman-team .our-team .team-list .gambar-team {
