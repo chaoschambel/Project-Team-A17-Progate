@@ -1,298 +1,244 @@
 /* Kustomisasi warna di sini  */
 :root {
-	--main-white: #ececec;
-	--main-red: #d11d53;
-	--main-blue: #497c7c;
-	--main-orange: #ffbd42;
-	--main-brown: #c99b5a;
-	--main-purple: #34113f;
-}
-
-/* Base reset */
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-html {
-	font-size: 10px;
-}
-
-/* MEDIA QUERY UNTUK MENGATUR FONT PADA UKURAN LAYAR YANG BERBEDA.
+    --main-white: #ececec;
+    --main-red: #d11d53;
+    --main-blue: #497c7c;
+    --main-orange: #ffbd42;
+    --main-brown: #c99b5a;
+    --main-purple: #4b0c5e;
+    --main-grey: #c7cac8;
+  }
+  
+  /* Base reset */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+    
+  html {
+    font-size: 10px;
+  }
+  
+  /* MEDIA QUERY UNTUK MENGATUR FONT PADA UKURAN LAYAR YANG BERBEDA.
   */
+    
+  /* Screen 1200px*/
+  @media (max-width: 1200px) {
+    html {
+      font-size: 60%;
+    }
+  }
+  
+  /* Screen 980px */
+  @media (max-width: 980px) {
+    html {
+      font-size: 58%;
+    }
+  }
+  
+  /* Screen 460px*/
+  @media (max-width: 460px) {
+    html {
+      font-size: 55%;
+    }
+  }
+  
+  /* PENGATURAN STYLE DASAR */
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px; /* mengatur ukuran font */
+    font-weight: 400; /* mengatur tebal font di bagian body*/
+    line-height: 1.4; /* mengatur spasi atas dan bawah text*/
+    color: var(--main-white); /* pengaturan warna ada di baris 3 sampai 8*/
+    
+  }
+ header {
+    background-image: url(BG.jpg);
+    background-size: cover;
+  
+  }
+  
+  h1,
+  h2 {
+    font-family: monospace;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 80px;
+    color: var(--main-purple);
+    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+   
+  }
+  
+  h2 {
+    font-size: 42px;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--main-purple);
+    
+  }
+  
+  img {
+    display: block;
+    width: 100%;
+  }
+  /* AKHIR PENGATURAN STYLE DASAR*/
 
-/* Screen 1200px*/
-@media (max-width: 1200px) {
-	html {
-		font-size: 60%;
-	}
-}
 
-/* Screen 980px */
-@media (max-width: 980px) {
-	html {
-		font-size: 58%;
-	}
-}
+  /* Pengaturan Menu */
+  
+  .menu-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .header-left{
+    float: left;
+  }
+  .header-right li{
+   float: right;
+   margin-right: 5px;
+  }
+  .header-right{
+    float: right;
+  }
+  .logo{
+    width: 50px;
+    height:50px;
+    margin-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  @media (max-width: 28.75em) {
+    .menu-bar {
+      justify-content: center;
+    }
+  
+   .menu-list {
+      margin: 0 1rem;
+    }
+  }
+  
+  .menu-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+  }
+  
+  .menu-list a:hover {
+    background: var(--main-grey);
+  }
+  /* AKHIR PENGATURAN MENU */
 
-/* Screen 460px*/
-@media (max-width: 460px) {
-	html {
-		font-size: 55%;
-	}
-}
+  /* PENGATURAN HALAMAN UTAMA */
+  
+  .halaman-utama {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;  
+  }
+  
+  .content{
+    float: left;
+  }
+ 
+  .content img{
+    width: 120px;
+    height: 100%;
+    margin-top: 10px;
+    margin-right: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    
+  }
+  
+  /* AKHIR HALAMAN UTAMA */
 
-/* PENGATURAN STYLE DASAR */
+  
+  /* HALAMAN TEAM */
+  
+  .halaman-team {
+    text-align: center;
+    padding: 10rem 2rem;
+    background: var(--main-blue);
+  }
+  
+  .header-halaman-team {
+    max-width: 640px;
+    margin: 0 auto 6rem auto;
+    border-bottom: 0.2rem solid var(--main-white);
+  }
+  .team-list{
+    display: flex;
+  }
+  .gambar-team{
+    width: 100px;
+  }
+  @media (max-width: 28.75em) {
+    .header-halaman-team {
+      font-size: 4rem;
+    }
+  }
+   
+  /* Contact section */
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    background: var(--main-orange);
+  }
+  
+  .contact-section-header > h2 {
+    font-size: 6rem;
+  }
+  
+  @media (max-width: 28.75em) {
+    .contact-section-header > h2 {
+      font-size: 4rem;
+    }
+  }
 
-body {
-	font-family: "Poppins", sans-serif;
-	font-size: 18px; /* mengatur ukuran font */
-	font-weight: 400; /* mengatur tebal font di bagian body*/
-	line-height: 1.4; /* mengatur spasi atas dan bawah text*/
-	color: var(--main-white); /* pengaturan warna ada di baris 3 sampai 8*/
-}
-
-h1,
-h2 {
-	font-family: "Raleway", sans-serif;
-	font-weight: 700;
-	text-align: center;
-}
-
-h1 {
-	font-size: 60px;
-}
-
-h2 {
-	font-size: 42px;
-}
-
-ul {
-	list-style: none;
-}
-
-a {
-	text-decoration: none;
-	color: var(--main-white);
-}
-
-img {
-	display: block;
-	width: 100%;
-}
-/* AKHIR PENGATURAN STYLE DASAR*/
-
-/* Pengaturan Menu */
-
-.menu-bar {
-	display: flex;
-	justify-content: flex-end;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: var(--main-red);
-	box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-	z-index: 1;
-}
-
-.menu-list {
-	display: flex;
-	margin-right: 20px;
-}
-
-@media (max-width: 28.75em) {
-	.menu-bar {
-		justify-content: center;
-	}
-
-	.menu-list {
-		margin: 0 1rem;
-	}
-}
-
-.menu-list a {
-	display: block;
-	font-size: 2.2rem;
-	padding: 2rem;
-}
-
-.menu-list a:hover {
-	background: var(--main-blue);
-}
-/* AKHIR PENGATURAN MENU */
-
-/* PENGATURAN HALAMAN UTAMA */
-
-.halaman-utama {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100vh;
-	background-color: var(--main-brown);
-}
-
-.halaman-utama p {
-	font-size: 30px;
-	font-weight: 200;
-	font-style: italic;
-	color: var(--main-red);
-}
-/* AKHIR HALAMAN UTAMA */
-
-/* HALAMAN TEAM */
-
-.halaman-team {
-	padding: 80px 0;
-	text-align: center;
-	background-color: var(--main-blue);
-}
-
-.halaman-team h2 {
-	font-size: 48px;
-	color: #fff;
-	margin-bottom: 25px;
-}
-
-.halaman-team .our-team {
-	display: flex;
-	width: auto;
-	justify-content: center;
-	flex-wrap: wrap;
-	color: #1f1f1f;
-}
-
-.halaman-team .our-team .team-list {
-	width: 250px;
-	margin: 5px;
-	background-color: #fff;
-	padding: 20px 10px;
-	border-radius: 20px;
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-}
-
-.halaman-team .our-team .team-list .gambar-team {
-	background-color: #e9e5fa;
-	max-width: 190px;
-	width: 100%;
-	height: 190px;
-	margin: 0 auto;
-	border-radius: 50%;
-	padding: 5px;
-	cursor: pointer;
-	position: relative;
-}
-
-.halaman-team .our-team .team-list .gambar-team img {
-	width: 100%;
-	height: 100%;
-	border-radius: 50%;
-}
-
-.halaman-team .our-team .team-list h3 {
-	text-transform: uppercase;
-	font-size: 18px;
-	line-height: 18px;
-	letter-spacing: 2px;
-	margin: 15px 0 0;
-}
-
-.halaman-team .our-team .team-list span {
-	font-size: 10px;
-}
-
-.halaman-team .our-team .team-list p {
-	margin-top: 20px;
-	font-size: 14px;
-	line-height: 20px;
-}
-
-.halaman-team .our-team .team-list .social-media {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 95%;
-	height: 95%;
-	background: rgba(0, 0, 0, 0.65);
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	transform: scale(0);
-	transition: all 0.5s ease;
-}
-
-.halaman-team .our-team .team-list .social-media .item {
-	margin: 0 10px;
-}
-
-.halaman-team .our-team .team-list .social-media .item .fab {
-	color: var(--main-blue);
-	font-size: 20px;
-}
-
-.halaman-team .our-team .team-list .gambar-team:hover .social-media {
-	transform: scale(1);
-}
-/* AKHIR HALAMAN TEAM */
-
-/* Contact section */
-
-.contact-section {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	width: 100%;
-	height: 80vh;
-	padding: 0 2rem;
-	background: var(--main-orange);
-}
-
-.contact-section-header > h2 {
-	font-size: 6rem;
-}
-
-@media (max-width: 28.75em) {
-	.contact-section-header > h2 {
-		font-size: 4rem;
-	}
-}
-
-.contact-links {
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	max-width: 980px;
-	margin-top: 4rem;
-	flex-wrap: wrap;
-}
-
-.contact-links a {
-	margin: 0 15px;
-}
-
-.contact-details {
-	font-size: 2.4rem;
-	text-shadow: 2px 2px 1px #1f1f1f;
-	transition: transform 0.3s ease-out;
-}
-
-.contact-details:hover {
-	transform: translateY(8px);
-}
-
-/* Footer */
-
-footer {
-	/* color: #1f1f1f; */
-	background-color: var(--main-purple);
-	text-align: center;
-	padding: 5px 0;
-	font-size: 80%;
-	font-weight: 400;
-}
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 980px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .contact-details {
+    font-size: 2.4rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  
+  /* Footer */
